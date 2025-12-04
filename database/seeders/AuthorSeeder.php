@@ -21,7 +21,7 @@ class AuthorSeeder extends Seeder
             'Dewi Lestari',
             'Habiburrahman El Shirazy',
             'Pramoedya Ananta Toer',
-            'George Orwell',
+            'N. Gregory Mankiw',
             'Yuval Noah Harari',
             'Stephen Hawking',
             'Agatha Christie',
@@ -30,7 +30,6 @@ class AuthorSeeder extends Seeder
         foreach ($authors as $a) {
             Author::create([
                 'name' => $a,
-                'bio' => "Biografi singkat penulis $a",
             ]);
         }
     }

@@ -16,6 +16,7 @@ class CategorySeeder extends Seeder
         //
         $categories = [
             'Novel',
+            'Fantasy',
             'Fiction',
             'Non-Fiction',
             'Technology',
@@ -24,12 +25,12 @@ class CategorySeeder extends Seeder
             'Biography',
             'Education',
             'Comics',
+            'Economy',
         ];
 
         foreach ($categories as $category) {
             Category::create([
                 'name' => $category,
-                'description' => "Category for $category books",
             ]);
         }
     }
