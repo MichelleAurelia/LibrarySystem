@@ -6,3 +6,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/books', function () {
     return 'All books page placeholder';
 })->name('books.index');
+
+Route::delete('author/{author}',[AuthorController::class, 'destroy'])->name('author.destroy');

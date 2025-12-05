@@ -20,7 +20,7 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        //
+        return view('create.author');
     }
 
     /**
@@ -28,38 +28,39 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Author::create($request->all());
+        return redirect()->route('books.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Author $author)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Author $author)
+    public function edit($id)
     {
-        //
+        $author = Author::findOrFail($id);
+        return view('author.edit', compact('author'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Author $author)
-    {
-        //
+    public function update(Request $request, $id){
+        $request ->validate([
+            'name' => 'required|string|max:255'
+        ]);
+
+        $author = Author::findOrFail($id);
+        $author->name = $request->name;
+        $author->save();
+
+        return redirect()->back()->with('success',' update Author name successfully!!');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Author $author)
     {
-        //
+        $author->delete();
+        return redirect()->back()->with('success','delete Author successfully');
     }
 }
