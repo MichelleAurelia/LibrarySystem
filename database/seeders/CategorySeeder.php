@@ -26,6 +26,16 @@ class CategorySeeder extends Seeder
             'Education',
             'Comics',
             'Economy',
+            'Romance',
+            'Mystery',
+            'Thriller',
+            'Adventure',
+            'Philosophy',
+            'Self-Help',
+            'Classic',
+            'Children',
+            'Poetry',
+            'Drama',
         ];
 
         foreach ($categories as $category) {

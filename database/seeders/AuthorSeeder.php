@@ -25,6 +25,16 @@ class AuthorSeeder extends Seeder
             'Yuval Noah Harari',
             'Stephen Hawking',
             'Agatha Christie',
+            'George Orwell',
+            'Dan Brown',
+            'F. Scott Fitzgerald',
+            'J.R.R. Tolkien',
+            'Ahmad Fuadi',
+            'Raditya Dika',
+            'Paulo Coelho',
+            'Harper Lee',
+            'John Green',
+            'C.S. Lewis',
         ];
 
         foreach ($authors as $a) {
