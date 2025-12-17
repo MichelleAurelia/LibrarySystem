@@ -39,6 +39,17 @@
             </div>
             <div class="flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-orange-200 hover:text-white transition">Home</a>
+                <!-- Khusus Role Admin -->
+
+                <a href="{{ route('admin-page') }}" class="text-orange-200 hover:text-white transition">Manage Books</a>
+
+                <!-- -------------------------------------------------------------------  -->
+
+                <!-- Khusus Role Admin -->
+                 
+                <a href="{{ route('borrowList-page') }}" class="text-orange-200 hover:text-white transition">Borrowed Books</a>
+
+                <!-- -------------------------------------------------------------------  -->
                 <form action="{{ route('books.search') }}" method="GET" class="relative">
                     <input type="text" name="query" placeholder="Search books..."
                         class="bg-gray-800 text-gray-300 rounded-full py-1 px-4 pl-10 focus:outline-none focus:bg-gray-700 focus:text-white transition w-64">
@@ -62,7 +73,6 @@
                                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                             </svg>
                         </a>
-
                     @else
                         <span>Guest</span>
                         <a href="{{ route('loginForm') }}">

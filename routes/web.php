@@ -15,6 +15,14 @@ Route::post('/user/login',[AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class,'registrationForm'])->name('regisForm');
 Route::post('/user/regis',[AuthController::class,'register'])->name('register');
 Route::get('/user/logout', [AuthController::class, 'logout'])->middleware(MustLogin::class)->name('logout');
+Route::get('/user/borrow-list', [App\Http\Controllers\BookController::class, 'borrowed'])->name('borrowList-page');
+
+
+Route::get('/admin/manage', function () {
+    return view('admin.manage');
+})->name('admin-page');
+
+
 //Route::get('/login-page', function () {
 //return view('login');
 //)->name('login-page');

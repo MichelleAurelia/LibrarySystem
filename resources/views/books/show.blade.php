@@ -8,7 +8,7 @@
             <!-- Book Cover -->
             <div class="md:w-1/3 lg:w-1/4">
                 <div class="relative aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
-                    <img src="{{ $book->image ?? 'https://placehold.co/400x600' }}" alt="{{ $book->title }}"
+                    <img src="{{ asset($book->image) ?? 'https://placehold.co/400x600' }}" alt="{{ $book->title }}"
                         class="object-cover w-full h-full">
                 </div>
             </div>
@@ -21,7 +21,9 @@
                         <span>By <span
                                 class="text-white">{{ $book->authors->first()->name ?? 'Unknown Author' }}</span></span>
                         <span>&bull;</span>
-                        <span>{{ $book->categories->first()->name ?? 'General' }}</span>
+                        @foreach ($book->categories as $genre)
+                            <span>{{ $genre->name ?? 'General' }}</span>
+                        @endforeach
                         <span>&bull;</span>
                         <span><span
                                 class="{{ $book->status === 'available' ? 'text-green-400' : 'text-red-400' }} capitalize">{{ $book->status }}</span></span>

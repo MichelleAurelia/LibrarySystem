@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Borrow;
 use Illuminate\Http\Request;
+
 
 class BookController extends Controller
 {
@@ -24,6 +27,16 @@ class BookController extends Controller
         return view('viewAll', compact('categories'));
     }
 
+    // Show Borrowed Books
+    public function borrowed()
+    {
+        $userId = session('user_id');
+
+        $borrowedBooks = Borrow::where('user_id', $userId)->with('book')->get();
+
+        return view('user.borrowList', compact('borrowedBooks'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -40,6 +53,7 @@ class BookController extends Controller
         $query = $request->input('query');
         $books = Book::where('title', 'like', "%{$query}%")
             ->orWhere('description', 'like', "%{$query}%")
+            // ->orWhere('authors', 'like', "%{$query}%")
             ->with(['authors', 'categories'])
             ->get();
 
