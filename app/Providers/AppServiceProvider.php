@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with('user', $user);
         });
+        
+        if (app()->environment('production')) {
+        URL::forceScheme('https');
+    }
     }
     /**
      * Register any application services.
