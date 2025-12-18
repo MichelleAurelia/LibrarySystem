@@ -39,16 +39,18 @@
             </div>
             <div class="flex items-center space-x-8">
                 <a href="{{ route('home') }}" class="text-orange-200 hover:text-white transition">Home</a>
+                @if(session('user_id'))
                 <!-- Khusus Role Admin -->
-
-                <a href="{{ route('admin-page') }}" class="text-orange-200 hover:text-white transition">Manage Books</a>
-
+                    @if(session('role') == 'admin')
+                        <a href="{{ route('admin-page') }}" class="text-orange-200 hover:text-white transition">Manage Books</a>
+                    @endif
                 <!-- -------------------------------------------------------------------  -->
 
                 <!-- Khusus Role User -->
-                 
-                <a href="{{ route('borrowList-page') }}" class="text-orange-200 hover:text-white transition">Borrowed Books</a>
-
+                    @if(session('role') == 'member')
+                        <a href="{{ route('borrowList-page') }}" class="text-orange-200 hover:text-white transition">Borrowed Books</a>
+                    @endif
+                @endif
                 <!-- -------------------------------------------------------------------  -->
                 <form action="{{ route('books.search') }}" method="GET" class="relative">
                     <input type="text" name="query" placeholder="Search books..."

@@ -16,34 +16,61 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         //
-        User::create([
-            'name' => 'Jeisen',
-            'email' => 'Jeisen@example.com',
-            'password' => Hash::make('Jeisen123'),
-        ]);
+         User::firstOrCreate(
+            ['email' => 'Jeisen@example.com'],
+            [
+                'name' => 'Jeisen',
+                'password' => Hash::make('Jeisen123'),
+            ]
+        );
 
-        User::create([
-            'name' => 'Michelle',
-            'email' => 'michelle@example.com',
-            'password' => Hash::make('michelle123'),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'michelle@example.com'],
+            [
+                'name' => 'Michelle',
+                'password' => Hash::make('michelle123'),
+            ]
+        );
 
-        User::create([
-            'name' => 'Carlson',
-            'email' => 'carlson@example.com',
-            'password' => Hash::make('carlson123'),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'carlson@example.com'],
+            [
+                'name' => 'Carlson',
+                'password' => Hash::make('carlson123'),
+            ]
+        );
 
-        User::create([
-            'name' => 'John',
-            'email' => 'john@example.com',
-            'password' => Hash::make('john123'),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'john@example.com'],
+            [
+                'name' => 'John',
+                'password' => Hash::make('john123'),
+            ]
+        );
 
-        User::create([
-            'name' => 'Samuel',
-            'email' => 'samuel@example.com',
-            'password' => Hash::make('samuel123'),
-        ]);
+        User::firstOrCreate(
+            ['email' => 'samuel@example.com'],
+            [
+                'name' => 'Samuel',
+                'password' => Hash::make('samuel123'),
+            ]
+        );
+
+        // ADMIN BARU
+        User::firstOrCreate(
+            ['email' => 'adminnn1@library.com'],
+            [
+                'name' => 'admin001',
+                'password' => Hash::make('admin11123'),
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'adminnn2@library.com'],
+            [
+                'name' => 'admin002',
+                'password' => Hash::make('admin21123'),
+            ]
+        );
     }
 }

@@ -3,10 +3,20 @@
 @section('content')
     <h1 class="text-4xl md:text-5xl font-bold mb-2">Add New Book</h1>
     <div class="w-full h-px bg-gray-700 my-6"></div>
-
-    <form action="" class="flex flex-col gap-6">
+    @if ($errors->any())
+        <div class="bg-red-500 text-white p-4 rounded mb-4">
+        <strong>Whoops! Ada masalah input:</strong>
+        <ul class="list-disc pl-5 mt-2">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    <form action="{{ route ('add-book') }}" method="POST" enctype="multipart/form-data" class="flex flex-col gap-6">
+        @csrf
         <div>
-            <label class="block font-semibold">Title</label>
+            <label class="block font-semibold">Book Title</label>
             <input type="text" name="title" class="mt-3 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 w-full" placeholder="Enter Book Title"required>
         </div>
 
@@ -16,13 +26,21 @@
         </div>
 
         <div>
-            <label class="block font-semibold">Cover Image File Name</label>
-            <input type="text" name="fileName" class="mt-3 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 w-full" placeholder="Enter Book Cover File Name"required>
+            <label class="block font-semibold">Cover Image</label>
+            <input type="file" name="image" accept="image/*" class="block w-full text-sm text-gray-400
+                      file:mr-4 file:py-2 file:px-4
+                      file:rounded-full file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-blue-600 file:text-white
+                      hover:file:bg-blue-700 cursor-pointer">
+            @error('image')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+            @enderror
         </div>
         
         <div>
             <label class="block font-semibold">Book Publish Year</label>
-            <input type="text" name="publishYear" class="mt-3 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 w-full" placeholder="Enter Book Cover Publish Year"required>
+            <input type="text" name="publish_year" class="mt-3 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300 w-full" placeholder="Enter Book Cover Publish Year"required>
         </div>
 
         <div>

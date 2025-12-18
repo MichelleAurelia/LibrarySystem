@@ -8,7 +8,7 @@
             <!-- Book Cover -->
             <div class="md:w-1/3 lg:w-1/4">
                 <div class="relative aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
-                    <img src="{{ asset($book->image) ?? 'https://placehold.co/400x600' }}" alt="{{ $book->title }}"
+                    <img src="{{ $book->image ? asset('storage/' . $book->image) : 'https://placehold.co/200x300' }}" alt="{{ $book->title }}"
                         class="object-cover w-full h-full">
                 </div>
             </div>

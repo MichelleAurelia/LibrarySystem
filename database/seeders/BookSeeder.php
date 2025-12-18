@@ -14,7 +14,7 @@ class BookSeeder extends Seeder
         $books = [
             [
                 'title' => 'Harry Potter and the Sorcerer\'s Stone',
-                'image' => "storage/images/harry_potter.jpg",
+                'image' => "images/harry_potter.jpg",
                 'description' => 'Petualangan Harry Potter tahun pertama.',
                 'publish_year' => '1997',
                 'publisher' => 'Bloomsbury',
@@ -23,7 +23,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Laskar Pelangi',
-                'image' => "storage/images/laskar_pelangi.jpg",
+                'image' => "images/laskar_pelangi.jpg",
                 'description' => 'Perjalanan hidup anak-anak Belitung dalam meraih pendidikan.',
                 'publish_year' => '2005',
                 'publisher' => 'Bentang Pustaka',
@@ -32,7 +32,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Hobbit',
-                'image' => "storage/images/the_hobbit.jpg",
+                'image' => "images/the_hobbit.jpg",
                 'description' => 'Petualangan Bilbo Baggins mencari harta karun naga Smaug.',
                 'publish_year' => '1937',
                 'publisher' => 'George Allen & Unwin',
@@ -41,7 +41,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Bumi Manusia',
-                'image' => "storage/images/bumi_manusia.jpg",
+                'image' => "images/bumi_manusia.jpg",
                 'description' => 'Kisah cinta Minke dan Annelies di era kolonial Belanda.',
                 'publish_year' => '1980',
                 'publisher' => 'Hasta Mitra',
@@ -50,7 +50,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'To Kill a Mockingbird',
-                'image' => "storage/images/to_kill_a_mockingbird.jpg",
+                'image' => "images/to_kill_a_mockingbird.jpg",
                 'description' => 'Kisah tentang keadilan dan rasisme di Selatan Amerika.',
                 'publish_year' => '1960',
                 'publisher' => 'J.B. Lippincott & Co.',
@@ -59,7 +59,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => '5 CM',
-                'image' => "storage/images/5cm.jpg",
+                'image' => "images/5cm.jpg",
                 'description' => 'Perjalanan lima sahabat menuju puncak Mahameru.',
                 'publish_year' => '2005',
                 'publisher' => 'Grasindo',
@@ -68,7 +68,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Great Gatsby',
-                'image' => "storage/images/the_great_gatsby.jpg",
+                'image' => "images/the_great_gatsby.jpg",
                 'description' => 'Kisah Jay Gatsby dan obsesi terhadap Daisy Buchanan.',
                 'publish_year' => '1925',
                 'publisher' => 'Charles Scribner\'s Sons',
@@ -77,7 +77,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Negeri 5 Menara',
-                'image' => "storage/images/negeri_5_menara.jpg",
+                'image' => "images/negeri_5_menara.jpg",
                 'description' => 'Kisah enam santri yang mengejar mimpi dari pesantren Gontor.',
                 'publish_year' => '2009',
                 'publisher' => 'Gramedia',
@@ -86,7 +86,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Catcher in the Rye',
-                'image' => "storage/images/catcher_in_the_rye.jpg",
+                'image' => "images/catcher_in_the_rye.jpg",
                 'description' => 'Perjalanan remaja Holden Caulfield setelah dikeluarkan sekolah.',
                 'publish_year' => '1951',
                 'publisher' => 'Little, Brown and Company',
@@ -95,7 +95,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Pulang',
-                'image' => "storage/images/pulang.jpg",
+                'image' => "images/pulang.jpg",
                 'description' => 'Kisah pulang kampung para penghuni Tanah Surga karya Tere Liye.',
                 'publish_year' => '2015',
                 'publisher' => 'Republika',
@@ -104,7 +104,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Fault in Our Stars',
-                'image' => "storage/images/fault_in_our_stars.jpg",
+                'image' => "images/fault_in_our_stars.jpg",
                 'description' => 'Kisah cinta dua remaja pengidap kanker.',
                 'publish_year' => '2012',
                 'publisher' => 'Dutton Books',
@@ -113,7 +113,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Perahu Kertas',
-                'image' => "storage/images/perahu_kertas.jpg",
+                'image' => "images/perahu_kertas.jpg",
                 'description' => 'Kisah cinta Kugy dan Keenan dalam perjalanan hidup mereka.',
                 'publish_year' => '2009',
                 'publisher' => 'Bentang Pustaka',
@@ -122,7 +122,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => '1984',
-                'image' => "storage/images/1984.jpg",
+                'image' => "images/1984.jpg",
                 'description' => 'Dunia distopia dengan pengawasan total oleh Big Brother.',
                 'publish_year' => '1949',
                 'publisher' => 'Secker & Warburg',
@@ -131,7 +131,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Koala Kumal',
-                'image' => "storage/images/koala_kumal.jpg",
+                'image' => "images/koala_kumal.jpg",
                 'description' => 'Kumpulan cerita lucu dan menyentuh tentang patah hati.',
                 'publish_year' => '2015',
                 'publisher' => 'GagasMedia',
@@ -140,7 +140,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Alchemist',
-                'image' => "storage/images/the_alchemist.jpg",
+                'image' => "images/the_alchemist.jpg",
                 'description' => 'Perjalanan Santiago mencari harta karun dan takdir hidupnya.',
                 'publish_year' => '1988',
                 'publisher' => 'HarperTorch',
@@ -149,7 +149,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Rembulan Tenggelam di Wajahmu',
-                'image' => "storage/images/rembulan.jpg",
+                'image' => "images/rembulan.jpg",
                 'description' => 'Perjalanan spiritual seorang anak bernama Ray.',
                 'publish_year' => '2009',
                 'publisher' => 'Republika',
@@ -158,7 +158,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe',
-                'image' => "storage/images/narnia.jpg",
+                'image' => "images/narnia.jpg",
                 'description' => 'Empat bersaudara memasuki dunia Narnia melalui lemari pakaian.',
                 'publish_year' => '1950',
                 'publisher' => 'Geoffrey Bles',
@@ -167,7 +167,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Hujan',
-                'image' => "storage/images/hujan.jpg",
+                'image' => "images/hujan.jpg",
                 'description' => 'Kisah perjalanan Lail yang hidup di tengah bencana besar dunia.',
                 'publish_year' => '016',
                 'publisher' => 'Gramedia',
@@ -176,7 +176,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Da Vinci Code',
-                'image' => "storage/images/da_vinci_code.jpg",
+                'image' => "images/da_vinci_code.jpg",
                 'description' => 'Misteri pembunuhan yang mengungkap rahasia kuno Gereja.',
                 'publish_year' => '2003',
                 'publisher' => 'Doubleday',
@@ -185,7 +185,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Sabtu Bersama Bapak',
-                'image' => "storage/images/sabtu_bersama_bapak.jpg",
+                'image' => "images/sabtu_bersama_bapak.jpg",
                 'description' => 'Pesan-pesan seorang ayah kepada keluarganya setelah ia tiada.',
                 'publish_year' => '2014',
                 'publisher' => 'GagasMedia',
@@ -194,7 +194,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Sang Pemimpi',
-                'image' => "storage/images/sang_pemimpi.jpg",
+                'image' => "images/sang_pemimpi.jpg",
                 'description' => 'Kisah Ikal dan Arai mengejar mimpi sampai ke Prancis.',
                 'publish_year' => '2006',
                 'publisher' => 'Bentang Pustaka',
@@ -203,7 +203,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Origin',
-                'image' => "storage/images/origin.jpg",
+                'image' => "images/origin.jpg",
                 'description' => 'Robert Langdon menyelidiki misteri besar tentang asal-usul manusia.',
                 'publish_year' => '2017',
                 'publisher' => 'Doubleday',
@@ -212,7 +212,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Habis Gelap Terbitlah Terang',
-                'image' => "storage/images/habis_gelap.jpg",
+                'image' => "images/habis_gelap.jpg",
                 'description' => 'Kumpulan surat Kartini yang menginspirasi emansipasi wanita.',
                 'publish_year' => '1922',
                 'publisher' => 'Balai Pustaka',
@@ -221,7 +221,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Rich Dad Poor Dad',
-                'image' => "storage/images/rich_dad_poor_dad.jpg",
+                'image' => "images/rich_dad_poor_dad.jpg",
                 'description' => 'Tentang pola pikir finansial untuk mencapai kebebasan finansial.',
                 'publish_year' => '1997',
                 'publisher' => 'Warner Books',
@@ -230,7 +230,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Silent Patient',
-                'image' => "storage/images/the_silent_patient.jpg",
+                'image' => "images/the_silent_patient.jpg",
                 'description' => 'Seorang perempuan yang berhenti berbicara setelah membunuh suaminya.',
                 'publish_year' => '2019',
                 'publisher' => 'Celadon Books',
@@ -239,7 +239,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'The Subtle Art of Not Giving a F*ck',
-                'image' => "storage/images/subtle_art.jpg",
+                'image' => "images/subtle_art.jpg",
                 'description' => 'Pendekatan baru dalam menjalani hidup dengan fokus pada hal bermakna.',
                 'publish_year' => '2016',
                 'publisher' => 'Harper',
@@ -248,7 +248,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Filosofi Kopi',
-                'image' => "storage/images/filosofi_kopi.jpg",
+                'image' => "images/filosofi_kopi.jpg",
                 'description' => 'Kumpulan cerita pendek tentang kopi dan kehidupan.',
                 'publish_year' => '2006',
                 'publisher' => 'Bentang Pustaka',
@@ -257,7 +257,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'A Brief History of Time',
-                'image' => "storage/images/brief_history_time.jpg",
+                'image' => "images/brief_history_time.jpg",
                 'description' => 'Penjelasan ilmiah mengenai kosmos dan teori fisika modern.',
                 'publish_year' => '1988',
                 'publisher' => 'Bantam Dell Publishing Group',
@@ -266,7 +266,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Sherlock Holmes: A Study in Scarlet',
-                'image' => "storage/images/study_in_scarlet.jpg",
+                'image' => "images/study_in_scarlet.jpg",
                 'description' => 'Kisah pertama Sherlock Holmes memecahkan kasus misterius.',
                 'publish_year' => '1887',
                 'publisher' => 'Ward Lock & Co.',
@@ -275,7 +275,7 @@ class BookSeeder extends Seeder
             ],
             [
                 'title' => 'Pusaran',
-                'image' => "storage/images/pusaran.jpg",
+                'image' => "images/pusaran.jpg",
                 'description' => 'Sebuah kisah petualangan dan misteri karya penulis Indonesia.',
                 'publish_year' => '2020',
                 'publisher' => 'Gramedia',

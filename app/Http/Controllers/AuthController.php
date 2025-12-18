@@ -14,25 +14,43 @@ class AuthController extends Controller
     }
 
     function login(Request $request){
+
+        $admin = ['adminnn1@library.com','adminnn2@library.com'];
+        
+
         $request->validate([
             'email'=>'required|email',
             'password'=>'required'
         ]);
+        
 
         $user = User::where('email', $request->email)->first();
         if($user && Hash::check($request->password, $user->password)){
+            if(in_array($request->email, $admin)){
+                $role = 'admin';
+            }else{
+                $role = 'member';
+            }
+
             session([
                 'user_id'=>$user->id,
                 'name'=>$user->name,
                 'email'=>$user->email,
+                'role' => $role
             ]);
-            return redirect('/')->with('success','Welcome back!');
+
+            if($role == 'admin'){
+                return redirect()->route('admin-page')->with('success', 'Welcome Admin!');
+            }else{
+                return redirect('/')->with('success','Welcome back!');
+            }
+            
         }
 
         return back()->with('error','check your email and password');
 
     }
-
+    
     function registrationForm(){
         return view('register');
     }

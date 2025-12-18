@@ -21,6 +21,7 @@ class BookController extends Controller
         if ($request->route()->getName() === 'admin-page') {
             return view('admin.manage', compact('books'));
         }
+
         return view('home', compact('books'));
     }
 
