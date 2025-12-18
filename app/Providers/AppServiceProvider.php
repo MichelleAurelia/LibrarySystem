@@ -13,11 +13,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-
-        if (app()->environment('production')) {
-            URL::forceScheme('https');
-        }
-        
         View::composer('*', function ($view) {
             $userId = session('user_id');
             $user = $userId ? User::find($userId) : null;
