@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Borrow;
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class BorrowController extends Controller
@@ -11,14 +12,19 @@ class BorrowController extends Controller
      * Borrow a book. 
      */
     public function store(Request $request)
+
     {
+        $location = $request->input('redirect_to', '/');
+
+
         $book = Book::findOrFail($request->book_id);
         if (!$book->isAvailable()) {
-            return redirect()->back()->with('error', 'Book is already borrowed');
+            return redirect($location)->with('error', 'Book is already borrowed');
         }
 
+
         Borrow::create([
-            'user_id' => auth()->id(),
+            'user_id' => session('user_id'),
             'book_id' => $request->book_id,
             'borrow_date' => now(),
             'return_date' => null,
@@ -28,15 +34,15 @@ class BorrowController extends Controller
             'status' => 'borrowed'
         ]);
 
-        return redirect()->back()->with('success', 'Book borrowed successfully!');
+        return redirect($location)->with('success', 'Book borrowed successfully!');
     }
 
     /**
      * Return a book.
      */
-    public function returnBook($id)
+    public function returnBook(Request $request)
     {
-        $borrow = Borrow::findOrFail($id);
+        $borrow = Borrow::findOrFail($request->borrow_id);
 
         $borrow->update([
             'return_date' => now(),

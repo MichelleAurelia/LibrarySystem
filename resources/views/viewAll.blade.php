@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="flex flex-col gap-10 justify-center">
+<div class="flex flex-col justify-center">
     <!-- Hero Section -->
-    <div class="mx-auto text-center mt-10 mb-24">
+    <div class="mx-auto text-center mb-[72px]">
         <div class="mx-auto aspect-[60/37] w-[650px] max-w-full">
             <img src="ViewAll-hero.png" alt="" class="w-full h-full object-cover">
         </div>
@@ -16,15 +16,17 @@
 
     @foreach($categories as $category)
 
-        <h2 class="text-3xl font-bold text-white mb-3">{{ $category->name }}</h2>
+        <h2 class="text-3xl font-bold text-white">{{ $category->name }}</h2>
 
-        <div class="relative mb-10">
+        <div class="relative">
 
             <!-- Left Button -->
             <button
                 class="slider-btn left-btn absolute left-0 top-1/2 -translate-y-1/2
-                       bg-black/60 text-white px-3 py-2 rounded-full z-10">
-                ‹
+                       bg-black/60 px-3 py-3 rounded-full z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg> 
             </button>
 
             <!-- Slider Container -->
@@ -34,17 +36,25 @@
                         class="group cursor-pointer flex-shrink-0
                                w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 max-w-[200px]"
                     >
-                        <div class="relative aspect-[2/3] mb-4 overflow-hidden rounded-lg">
-                            <img src="{{ $book->image ?? 'https://placehold.co/200x300' }}" 
-                                 alt="{{ $book->title }}" 
-                                 class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">View</span>
+                        <a href="{{ route('books.show', $book) }}">
+                            <div class="relative aspect-[2/3] overflow-hidden rounded-lg">
+                                <img src="{{ $book->image ?? 'https://placehold.co/200x300' }}" 
+                                    alt="{{ $book->title }}" 
+                                    class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                    <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">View</span>
+                                </div>
                             </div>
-                        </div>
-                        <h3 class="font-bold text-white truncate">{{ $book->title }}</h3>
-                        <p class="text-sm text-gray-400 truncate">By {{ $book->authors->first()->name ?? 'Unknown' }}</p>
-                        <p class="text-xs text-gray-500 mt-1">{{ $book->categories->first()->name ?? 'General' }}</p>
+                            <h3 class="font-bold text-white truncate">{{ $book->title }}</h3>
+                            <p class="text-sm text-gray-400 truncate">By {{ $book->authors->first()->name ?? 'Unknown' }}</p>
+                            
+                            <div class="flex flex-row flex-wrap">
+                                @foreach ($book->categories as $genre)
+                                    <p class="text-xs text-gray-500 mt-1 pr-[8px]">{{ $genre->name ?? general }}</p> 
+                                @endforeach
+                            </div> 
+                           
+                        </a>
                     </div>
                 @empty
                     <p>No data available.</p>
@@ -54,8 +64,10 @@
             <!-- Right Button -->
             <button
                 class="slider-btn right-btn absolute right-0 top-1/2 -translate-y-1/2
-                       bg-black/60 text-white px-3 py-2 rounded-full z-10">
-                ›
+                       bg-black/60 px-3 py-3 rounded-full z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
             </button>
 
         </div>
