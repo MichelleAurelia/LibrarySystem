@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('publish_year')->nullable();
             $table->string('publisher')->nullable();
+            $table->string('link')->nullable();
             $table->enum('status', ['available', 'borrowed'])->default('available');
             $table->timestamps();
         });

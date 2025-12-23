@@ -18,6 +18,7 @@ class Book extends Model
         'publish_year',
         'publisher',
         'status',
+        'link'
     ];
 
     public function categories()

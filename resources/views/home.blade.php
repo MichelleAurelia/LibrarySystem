@@ -33,7 +33,7 @@
                 <!-- Book Cover with Glow Effect -->
                 <div class="relative">
                     <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
-                    <img src="{{ $featuredBook->image ? asset($featuredBook->image) : 'https://placehold.co/300x450' }}" alt="{{ $featuredBook->title }}" class="relative z-10 w-64 md:w-80 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition duration-500">
+                    <img src="{{ $featuredBook->image ? asset('storage/' . $featuredBook->image) : 'https://placehold.co/300x450' }}" alt="{{ $featuredBook->title }}" class="relative z-10 w-64 md:w-80 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition duration-500">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 <div class="group cursor-pointer">
                     <a href="{{ route('books.show', $book) }}">
                         <div class="relative aspect-[2/3] mb-4 overflow-hidden rounded-lg">
-                            <img src="{{ $book->image ? asset($book->image) : 'https://placehold.co/200x300' }}" alt="{{ $book->title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                            <img src="{{ $book->image ? asset('storage/' . $book->image) : 'https://placehold.co/200x300' }}" alt="{{ $book->title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">View</span>
                             </div>

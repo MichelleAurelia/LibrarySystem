@@ -19,7 +19,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1997',
                 'publisher' => 'Bloomsbury',
                 'authors' => ['J.K. Rowling'],
-                'categories' => ['Novel', 'Fantasy', 'Fiction']
+                'categories' => ['Novel', 'Fantasy', 'Fiction'],
+                'link' => "https://drive.google.com/file/d/1bEWHSTPEVu-36in5t4TOS2sDqsOeYAhk/view?usp=sharing"
             ],
             [
                 'title' => 'Laskar Pelangi',
@@ -28,7 +29,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2005',
                 'publisher' => 'Bentang Pustaka',
                 'authors' => ['Andrea Hirata'],
-                'categories' => ['Novel', 'Inspiratif', 'Drama']
+                'categories' => ['Novel', 'Inspiratif', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1Txe9XAKiuNep26bFLbIKrf31MsO5BbHd/view?usp=drive_link"
             ],
             [
                 'title' => 'The Hobbit',
@@ -37,7 +39,9 @@ class BookSeeder extends Seeder
                 'publish_year' => '1937',
                 'publisher' => 'George Allen & Unwin',
                 'authors' => ['J.R.R. Tolkien'],
-                'categories' => ['Fantasy', 'Adventure']
+                'categories' => ['Fantasy', 'Adventure'],
+                'link' => "https://drive.google.com/file/d/1RXPHECuv95ixzyEXBC43_6msFWB840xz/view?usp=drive_link"      
+
             ],
             [
                 'title' => 'Bumi Manusia',
@@ -46,7 +50,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1980',
                 'publisher' => 'Hasta Mitra',
                 'authors' => ['Pramoedya Ananta Toer'],
-                'categories' => ['Sejarah', 'Drama']
+                'categories' => ['Sejarah', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1fv1r8p_D72aW7mb1yD12CtqXxH_3aOyp/view?usp=drive_link"
             ],
             [
                 'title' => 'To Kill a Mockingbird',
@@ -55,7 +60,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1960',
                 'publisher' => 'J.B. Lippincott & Co.',
                 'authors' => ['Harper Lee'],
-                'categories' => ['Drama', 'Social', 'Classic']
+                'categories' => ['Drama', 'Social', 'Classic'],
+                'link' => "https://drive.google.com/file/d/10AamgFliRT5nizeSXDkSgYMKNyCsTmsJ/view?usp=drive_link"      
             ],
             [
                 'title' => '5 CM',
@@ -64,7 +70,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2005',
                 'publisher' => 'Grasindo',
                 'authors' => ['Donny Dhirgantoro'],
-                'categories' => ['Petualangan', 'Drama', 'Motivasi']
+                'categories' => ['Petualangan', 'Drama', 'Motivasi'],
+                'link' => "https://drive.google.com/file/d/1o27_F24bUbflTWC9_ZBSxD3BPioTwO2H/view?usp=drive_link"      
             ],
             [
                 'title' => 'The Great Gatsby',
@@ -73,7 +80,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1925',
                 'publisher' => 'Charles Scribner\'s Sons',
                 'authors' => ['F. Scott Fitzgerald'],
-                'categories' => ['Classic', 'Drama']
+                'categories' => ['Classic', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1vm2BctmETPvv36Pvo6E5fYEONDkcQBs6/view?usp=drive_link"      
             ],
             [
                 'title' => 'Negeri 5 Menara',
@@ -82,7 +90,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2009',
                 'publisher' => 'Gramedia',
                 'authors' => ['Ahmad Fuadi'],
-                'categories' => ['Inspiratif', 'Drama']
+                'categories' => ['Inspiratif', 'Drama'],
+                'link' =>"https://drive.google.com/file/d/11ewhKzRQD9Hec-g2XzOFFGkAMqrZlga3/view?usp=drive_link"      
             ],
             [
                 'title' => 'The Catcher in the Rye',
@@ -91,7 +100,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1951',
                 'publisher' => 'Little, Brown and Company',
                 'authors' => ['J.D. Salinger'],
-                'categories' => ['Drama', 'Classic']
+                'categories' => ['Drama', 'Classic'],
+                'link' => "https://drive.google.com/file/d/1wJxTOxfhsIUt8J8PDcNkafv3NR7zmhwH/view?usp=drive_link"     
             ],
             [
                 'title' => 'Pulang',
@@ -100,7 +110,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2015',
                 'publisher' => 'Republika',
                 'authors' => ['Tere Liye'],
-                'categories' => ['Aksi', 'Drama']
+                'categories' => ['Aksi', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1QzCZ-iyvdStXVmZu4CuPuvuJHqOeKeZm/view?usp=drive_link"      
             ],
             [
                 'title' => 'The Fault in Our Stars',
@@ -109,7 +120,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2012',
                 'publisher' => 'Dutton Books',
                 'authors' => ['John Green'],
-                'categories' => ['Romance', 'Drama']
+                'categories' => ['Romance', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1c5NwqbiAaYLZdQ0CdIjs2-ozob75WseW/view?usp=drive_link"     
             ],
             [
                 'title' => 'Perahu Kertas',
@@ -118,7 +130,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2009',
                 'publisher' => 'Bentang Pustaka',
                 'authors' => ['Dewi Lestari'],
-                'categories' => ['Romance', 'Drama']
+                'categories' => ['Romance', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1X18V4ZfQDhwSQyz2ajA6nj6U8iKqEcnf/view?usp=drive_link"     
             ],
             [
                 'title' => '1984',
@@ -127,7 +140,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1949',
                 'publisher' => 'Secker & Warburg',
                 'authors' => ['George Orwell'],
-                'categories' => ['Dystopia', 'Political Fiction']
+                'categories' => ['Dystopia', 'Political Fiction'],
+                'link' => "https://drive.google.com/file/d/1OG99Yg1coo7j2NHhGGQSTWJnUUoLv4bv/view?usp=drive_link"     
             ],
             [
                 'title' => 'Koala Kumal',
@@ -136,7 +150,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2015',
                 'publisher' => 'GagasMedia',
                 'authors' => ['Raditya Dika'],
-                'categories' => ['Humor', 'Drama']
+                'categories' => ['Humor', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1vy8QbESMUFyEMEA-jBxQgazyo9Xoc9bG/view?usp=drive_link"    
             ],
             [
                 'title' => 'The Alchemist',
@@ -145,7 +160,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1988',
                 'publisher' => 'HarperTorch',
                 'authors' => ['Paulo Coelho'],
-                'categories' => ['Filosofi', 'Adventure']
+                'categories' => ['Filosofi', 'Adventure'],
+                'link' => "https://drive.google.com/file/d/1WVNqyqLgqXlQi4P8iI2xNFzONLlEVg-q/view?usp=drive_link"   
             ],
             [
                 'title' => 'Rembulan Tenggelam di Wajahmu',
@@ -154,7 +170,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2009',
                 'publisher' => 'Republika',
                 'authors' => ['Tere Liye'],
-                'categories' => ['Drama', 'Filosofi']
+                'categories' => ['Drama', 'Filosofi'],
+                'link' => "https://drive.google.com/file/d/1C9JirzZBGd8GDotGuUT7gKPetWY7mhFM/view?usp=drive_link"    
             ],
             [
                 'title' => 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe',
@@ -163,7 +180,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1950',
                 'publisher' => 'Geoffrey Bles',
                 'authors' => ['C.S. Lewis'],
-                'categories' => ['Fantasy', 'Adventure']
+                'categories' => ['Fantasy', 'Adventure'],
+                'link' => "https://drive.google.com/file/d/1Wx4cP6u-Q5rhEilJaD_WbmDv0MiOFFUm/view?usp=drive_link"   
             ],
             [
                 'title' => 'Hujan',
@@ -172,7 +190,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '016',
                 'publisher' => 'Gramedia',
                 'authors' => ['Tere Liye'],
-                'categories' => ['Drama', 'Sci-Fi']
+                'categories' => ['Drama', 'Sci-Fi'],
+                'link' => "https://drive.google.com/file/d/1EPf2Tt_OsU1NoLzFV5XqUTxRhWV_PVMv/view?usp=drive_link"    
             ],
             [
                 'title' => 'The Da Vinci Code',
@@ -181,7 +200,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2003',
                 'publisher' => 'Doubleday',
                 'authors' => ['Dan Brown'],
-                'categories' => ['Thriller', 'Mystery']
+                'categories' => ['Thriller', 'Mystery'],
+                'link' => "https://drive.google.com/file/d/1VRTGRxSV0H5via-AAwdHy-7NCHm3EgB8/view?usp=drive_link"     
             ],
             [
                 'title' => 'Sabtu Bersama Bapak',
@@ -190,7 +210,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2014',
                 'publisher' => 'GagasMedia',
                 'authors' => ['Adhitya Mulya'],
-                'categories' => ['Drama', 'Keluarga']
+                'categories' => ['Drama', 'Keluarga'],
+                'link' => "https://drive.google.com/file/d/1tkt8nJPambgRk9P5L_i0b_6CrXHxxC6g/view?usp=drive_link"    
             ],
             [
                 'title' => 'Sang Pemimpi',
@@ -199,7 +220,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2006',
                 'publisher' => 'Bentang Pustaka',
                 'authors' => ['Andrea Hirata'],
-                'categories' => ['Drama', 'Inspiratif']
+                'categories' => ['Drama', 'Inspiratif'],
+                'link' => "https://drive.google.com/file/d/1E_K8xJNjYDf1WEx8pBJNV-GjuCJXb_9q/view?usp=drive_link"    
             ],
             [
                 'title' => 'Origin',
@@ -208,7 +230,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2017',
                 'publisher' => 'Doubleday',
                 'authors' => ['Dan Brown'],
-                'categories' => ['Thriller', 'Mystery']
+                'categories' => ['Thriller', 'Mystery'],
+                'link' => "https://drive.google.com/file/d/1D8UURGKM7voJuaAGcPTckPvaTwuECRjg/view?usp=drive_link"     
             ],
             [
                 'title' => 'Habis Gelap Terbitlah Terang',
@@ -217,7 +240,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1922',
                 'publisher' => 'Balai Pustaka',
                 'authors' => ['R.A. Kartini'],
-                'categories' => ['Sejarah', 'Biografi']
+                'categories' => ['Sejarah', 'Biografi'],
+                'link' => "https://drive.google.com/file/d/1GVqhwdpGAgn9Keti4W632z_n7-vgd6_8/view?usp=drive_link"     
             ],
             [
                 'title' => 'Rich Dad Poor Dad',
@@ -226,7 +250,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1997',
                 'publisher' => 'Warner Books',
                 'authors' => ['Robert T. Kiyosaki'],
-                'categories' => ['Finance', 'Motivasi']
+                'categories' => ['Finance', 'Motivasi'],
+                'link' => "https://drive.google.com/file/d/1TdmENxXK3Ra-jTlqX6DAoqQG_YFIFVRo/view?usp=drive_link"
             ],
             [
                 'title' => 'The Silent Patient',
@@ -235,7 +260,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2019',
                 'publisher' => 'Celadon Books',
                 'authors' => ['Alex Michaelides'],
-                'categories' => ['Thriller', 'Psychological']
+                'categories' => ['Thriller', 'Psychological'],
+                'link' => "https://drive.google.com/file/d/1YtwHrDIsKNud4cb4VVwtcfD_lZhdOnod/view?usp=drive_link"
             ],
             [
                 'title' => 'The Subtle Art of Not Giving a F*ck',
@@ -244,7 +270,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2016',
                 'publisher' => 'Harper',
                 'authors' => ['Mark Manson'],
-                'categories' => ['Self-Help', 'Motivasi']
+                'categories' => ['Self-Help', 'Motivasi'],
+                'link' => "https://drive.google.com/file/d/1ug6NIk_X87oul8KyY7hHPGyn-S7Fz7nS/view?usp=drive_link"
             ],
             [
                 'title' => 'Filosofi Kopi',
@@ -253,7 +280,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2006',
                 'publisher' => 'Bentang Pustaka',
                 'authors' => ['Dewi Lestari'],
-                'categories' => ['Filosofi', 'Drama']
+                'categories' => ['Filosofi', 'Drama'],
+                'link' => "https://drive.google.com/file/d/1crX31Q5T2JRFI8k_dPstsJly11M6bLO6/view?usp=drive_link"
             ],
             [
                 'title' => 'A Brief History of Time',
@@ -262,7 +290,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1988',
                 'publisher' => 'Bantam Dell Publishing Group',
                 'authors' => ['Stephen Hawking'],
-                'categories' => ['Science', 'Non-Fiction']
+                'categories' => ['Science', 'Non-Fiction'],
+                'link' => "https://drive.google.com/file/d/1QibUm8CySZL5PEWQPh-JQ0duUrCUOI7c/view?usp=drive_link"
             ],
             [
                 'title' => 'Sherlock Holmes: A Study in Scarlet',
@@ -271,7 +300,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '1887',
                 'publisher' => 'Ward Lock & Co.',
                 'authors' => ['Arthur Conan Doyle'],
-                'categories' => ['Mystery', 'Classic']
+                'categories' => ['Mystery', 'Classic'],
+                'link' => "https://drive.google.com/file/d/1SOSC--YKw5oQ4McFg0QgGSNfNwj8JQ5m/view?usp=drive_link"
             ],
             [
                 'title' => 'Pusaran',
@@ -280,7 +310,8 @@ class BookSeeder extends Seeder
                 'publish_year' => '2020',
                 'publisher' => 'Gramedia',
                 'authors' => ['Tere Liye'],
-                'categories' => ['Adventure', 'Drama']
+                'categories' => ['Adventure', 'Drama'],
+                'link' => "dsadasdsadada"
             ],
         ];
 

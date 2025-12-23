@@ -13,20 +13,42 @@
 <body class="bg-[#0B1120] text-white font-sans antialiased">
 
     @if (session('success'))
-        <div id="toast-success"
-            class="fixed top-5 right-5 bg-green-800 text-white px-4 py-2 rounded shadow-lg opacity-0 transition-opacity duration-500 text-2xl">
-            {{ session('success') }}
+    <div id="toast-container"
+        class="fixed top-5 right-5 bg-green-800 text-white px-6 py-3 rounded shadow-lg opacity-0 transition-opacity duration-500 text-xl z-50">
+        {{ session('success') }}
+    </div>
+    @elseif(session('error'))
+        <div id="toast-container"
+            class="fixed top-5 right-5 bg-red-800 text-white px-6 py-3 rounded shadow-lg opacity-0 transition-opacity duration-500 text-xl z-50">
+            {{ session('error') }}
         </div>
-
-        <script>
-            const toast = document.getElementById('toast-success');
-            toast.style.opacity = 1;
-
-            setTimeout(() => {
-                toast.style.opacity = 0;
-            }, 2500); // hilang dalam 2.5 detik
-        </script>
     @endif
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pastikan ID di sini (toast-container) sama dengan ID di atas
+            const toast = document.getElementById('toast-container'); 
+            
+            if (toast) {
+                // Berikan sedikit delay agar transisi opacity-0 ke opacity-1 terlihat halus
+                setTimeout(() => {
+                    toast.classList.remove('opacity-0');
+                    toast.classList.add('opacity-100');
+                }, 100);
+
+                // Hilangkan setelah 2.5 detik
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                    
+                    // Hapus elemen dari layar setelah animasi selesai (0.5 detik)
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 500);
+                }, 2500);
+            }
+        });
+    </script>
 
     <div class="min-h-screen flex flex-col">
         <!-- Navbar -->

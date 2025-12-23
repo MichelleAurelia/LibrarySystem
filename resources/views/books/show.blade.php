@@ -8,7 +8,7 @@
             <!-- Book Cover -->
             <div class="md:w-1/3 lg:w-1/4">
                 <div class="relative aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
-                    <img src="{{ $book->image ? asset($book->image) : 'https://placehold.co/200x300' }}" alt="{{ $book->title }}"
+                    <img src="{{  $book->image ? asset('storage/' . $book->image): 'https://placehold.co/200x300' }}" alt="{{ $book->title }}"
                         class="object-cover w-full h-full">
                 </div>
             </div>
@@ -53,15 +53,22 @@
                 </div>
 
                 <div class="pt-6">
-                    <form action = "{{route ('books.borrow') }}" method = "POST">
-                    @csrf
-                    <input type = "hidden" name = "book_id" value = "{{$book->id}}">
-                    <input type="hidden" name="redirect_to" value="{{ url()->previous() }}">
-                    <button type = "submit"
-                        class="bg-[#EAD4AA] text-black font-bold py-3 px-8 rounded flex items-center space-x-2 hover:bg-[#dcc08e] transition">
-                        <span>BORROW BOOK REQUEST</span>
-                    </button>
-                    </form>
+                    @if($validateBorrow)
+                        <form action = "{{route ('books.borrow') }}" method = "POST">
+                            @csrf
+                            <input type = "hidden" name = "book_id" value = "{{$book->id}}">
+                            <input type="hidden" name="redirect_to" value="{{ url()->previous() }}">
+                            <button type = "submit"
+                            class="bg-[#EAD4AA] text-black font-bold py-3 px-8 rounded flex items-center space-x-2 hover:bg-[#dcc08e] transition">
+                            <span>BORROW BOOK REQUEST</span>
+                            </button>
+                        </form>
+                    @else
+                        <div class="mt-4 p-3 bg-red-900/50 border border-red-500 rounded-lg">
+                            <p class="text-red-200 text-sm font-semibold">Limit Reached!</p>
+                            <p class="text-red-300 text-xs">You have 3 active loans. Please return them to borrow more.</p>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -73,9 +73,16 @@ class BookController extends Controller
      * Display the specified resource.
      */
     public function show(Book $book)
-    {
+    {   
+        $user_id = session('user_id');
+        $validateBorrow = true;
+
+        $countCheck = Borrow::where('user_id', $user_id)->whereNull('return_date')->count();
+        if($countCheck >= 3){
+            $validateBorrow = false;
+        }
         $book->load(['authors', 'categories']);
-        return view('books.show', compact('book'));
+        return view('books.show', compact('book', 'validateBorrow'));
     }
 
     /**
