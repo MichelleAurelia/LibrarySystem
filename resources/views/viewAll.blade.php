@@ -9,8 +9,8 @@
             <img src="ViewAll-hero.png" alt="" class="w-full h-full object-cover">
         </div>
         <h1 class="text-4xl font-bold text-white mt-5">
-            Explore and Search for 
-            <br/><span class="text-orange-200">Any Book</span> That You Need
+            {{ __('user.view_title1') }} 
+            <br/><span class="text-orange-200">{{ __('user.view_title2') }} </span> {{ __('user.view_title3') }} 
         </h1>
     </div>
 
@@ -42,7 +42,7 @@
                                     alt="{{ $book->title }}" 
                                     class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                                    <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">View</span>
+                                    <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">{{ __('user.view') }}</span>
                                 </div>
                             </div>
                             <h3 class="font-bold text-white truncate">{{ $book->title }}</h3>
@@ -57,7 +57,7 @@
                         </a>
                     </div>
                 @empty
-                    <p>No data available.</p>
+                    <p>{{ __('user.no_data') }}.</p>
                 @endforelse
             </div>
 

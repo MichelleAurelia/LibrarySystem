@@ -6,9 +6,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LocalController;
 use App\Http\Middleware\MustLogin;
 use App\Http\Middleware\PreventHistory;
 use App\Http\Middleware\AdminHandler;
+
+
+Route::get('lang/{locale}', LocalController::class)->name('switch.language');    
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware(MustLogin::class)->middleware(PreventHistory::class)->name('home');
 Route::get('/view-all', [App\Http\Controllers\BookController::class, 'viewAll'])->name('view-all');

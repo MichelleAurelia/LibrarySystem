@@ -6,28 +6,28 @@
     @csrf
         
     <div class="flex flex-col">
-        <h1 class="text-xl font-semibold">Welcome Back to the Library System</h1>
-        <p class="text-md mt-1">Access the vast collection of resources, and stay updated</p>
+        <h1 class="text-xl font-semibold">{{ __('auth.title_log') }}</h1>
+        <p class="text-md mt-1">{{ __('auth.detail_log') }}</p>
     </div>
 
     <div class="flex flex-col gap-y-5">
         <div class="flex flex-col">
-            <label class="ms-[4px]">Email</label>
+            <label class="ms-[4px]">{{ __('auth.email') }}</label>
             <input 
                 type="email" 
                 name="email" 
                 class="mt-1 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300"
-                placeholder="Enter your email"
+                placeholder= "{{ __('auth.placeholder_email') }}"
                 required
             >
         </div>
         <div class="flex flex-col">
-            <label class="ms-[4px]">Password</label>
+            <label class="ms-[4px]">{{ __('auth.password') }}</label>
             <input 
                 type="password" 
                 name="password"
                 class="mt-1 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300"
-                placeholder="Enter your password"
+                placeholder= "{{ __('auth.placeholder_password') }}"
                 required
             >
         </div>
@@ -35,13 +35,13 @@
         <button 
             type = "submit"
             class="bg-[#EAD4AA] text-black font-bold py-3 px-8 rounded flex items-center justify-center space-x-2 hover:bg-[#dcc08e] transition mt-2">
-            <span>Login</span>
+            <span>{{ __('auth.butt_login') }}</span>
         </button>
     </div>
 
     <div class="flex flex-row gap-[4px] self-center">
-        <p>Don't have an account already ?</p>
-        <a href="{{ route('regisForm') }}" class="text-orange-200">Register Here</a>
+        <p>{{ __('auth.dont_have_acc') }}</p>
+        <a href="{{ route('regisForm') }}" class="text-orange-200">{{ __('auth.reg_link') }}</a>
     </div>
 </form>
 @endSection

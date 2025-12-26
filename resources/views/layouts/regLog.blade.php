@@ -16,6 +16,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
 
         <!-- LEFT SECTION -->
+         
         <div class="flex flex-col items-center justify-center px-6 h-full">
             <div class="bg-[#111C3A] rounded-3xl w-full max-w-lg p-10 shadow-xl">
                 

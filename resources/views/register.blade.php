@@ -1,34 +1,60 @@
+
 @extends('layouts.regLog')
 
 @section('content')
+
+<div class="flex items-center gap-3">
+    
+    <span class="text-sm font-bold {{ app()->getLocale() == 'en' ? 'text-blue-600' : 'text-gray-400' }}">
+        EN
+    </span>
+
+    <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="lang-toggle" class="sr-only peer" 
+            {{ app()->getLocale() == 'id' ? 'checked' : '' }}>
+
+        <div class="w-14 h-8 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+
+        <div class="absolute top-[4px] left-[5px] w-6 h-6 flex items-center justify-center transition-all peer-checked:opacity-0 peer-checked:-translate-x-full">
+            🇬🇧 </div>
+
+        <div class="absolute top-[4px] left-[5px] w-6 h-6 flex items-center justify-center opacity-0 translate-x-full transition-all peer-checked:opacity-100 peer-checked:translate-x-[100%]">
+            🇮🇩 </div>
+    </label>
+
+    <span class="text-sm font-bold {{ app()->getLocale() == 'id' ? 'text-blue-600' : 'text-gray-400' }}">
+        ID
+    </span>
+
+</div>
 
 <form action = "{{ route('register') }}" method="POST" class = "flex flex-col gap-y-5">
     @csrf
     
     <div class="flex flex-col">
-        <h1 class="text-xl font-semibold">Create Your Library Account</h1>
-        <p class="text-md mt-1">Please complete all fields to create your own accoutn</p>
+        <h1 class="text-xl font-semibold">{{ __('auth.title_reg') }}</h1>
+        <p class="text-md mt-1">{{ __('auth.detail_reg') }}</p>
     </div>
 
     <div class="flex flex-col gap-y-5">
         <div class="flex flex-col">
-            <label class="ms-[4px]">Full Name</label>
+            <label class="ms-[4px]">{{ __('auth.full_name') }}</label>
             <input 
                 type="name" 
                 name="name" 
                 class="mt-1 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300"
-                placeholder="Enter your name"
+                placeholder= "{{ __('auth.placeholder_name') }}"
                 required
             >
         </div>
 
         <div class="flex flex-col">
-            <label class="ms-[4px]">Email</label>
+            <label class="ms-[4px]">{{ __('auth.email') }}</label>
             <input 
                 type="email" 
                 name="email" 
                 class="mt-1 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300"
-                placeholder="example@gmail.com"
+                placeholder= "{{__('auth.placeholder_email') }}"
                 required
             >
             @error('email')
@@ -36,12 +62,12 @@
             @enderror
         </div>
         <div class="flex flex-col">
-            <label class="ms-[4px]">Password</label>
+            <label class="ms-[4px]">{{ __('auth.password') }}</label>
             <input 
                 type="password" 
                 name="password"
                 class="mt-1 p-3 bg-slate-800 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-orange-300"
-                placeholder="Atleast 8 characters long"
+                placeholder= "{{ __('auth.placeholder_password') }}"
                 required
             >
             @error('password')
@@ -51,13 +77,27 @@
         
 
         <button class="bg-[#EAD4AA] text-black font-bold py-3 px-8 rounded flex items-center justify-center space-x-2 hover:bg-[#dcc08e] transition mt-2">
-            <span>Sign Up</span>
+            <span>{{ __('auth.butt_submit') }}</span>
         </button>
     </div>
 
     <div class="flex flex-row gap-[4px] self-center">
-        <p>Have an account already ?</p>
-        <a href="{{ route('loginForm') }}" class="text-orange-200">Login</a>
+        <p>{{ __('auth.have_account') }}</p>
+        <a href="{{ route('loginForm') }}" class="text-orange-200">{{ __('auth.login_link') }}</a>
     </div>
 </form>
+
+
+<script>
+    const toggle = document.getElementById('lang-toggle');
+    toggle.addEventListener('change', function(){
+        if(this.checked){
+            window.location.href = "{{ route('switch.language', 'id') }}";
+        }else{
+            window.location.href = "{{ route('switch.language', 'en') }}";
+        }
+    })
+</script>
+
+
 @endSection

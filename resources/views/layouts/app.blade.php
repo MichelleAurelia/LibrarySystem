@@ -57,7 +57,7 @@
                 <span class="text-xl font-bold">Library System</span>
             </div>
             <div class="flex items-center space-x-8">
-                <a href="{{ route('home') }}" class="text-orange-200 hover:text-white transition">Home</a>
+                <a href="{{ route('home') }}" class="text-orange-200 hover:text-white transition">{{ __('user.home') }}</a>
                 @if(session('user_id'))
                 <!-- Khusus Role Admin -->
                     @if(session('role') == 'admin')
@@ -67,12 +67,12 @@
 
                 <!-- Khusus Role User -->
                     @if(session('role') == 'member')
-                        <a href="{{ route('borrowList-page') }}" class="text-orange-200 hover:text-white transition">Borrowed Books</a>
+                        <a href="{{ route('borrowList-page') }}" class="text-orange-200 hover:text-white transition">{{ __('user.borrow') }}</a>
                     @endif
                 @endif
                 <!-- -------------------------------------------------------------------  -->
                 <form action="{{ route('books.search') }}" method="GET" class="relative">
-                    <input type="text" name="query" placeholder="Search books..."
+                    <input type="text" name="query" placeholder="{{ __('user.search') }}..."
                         class="bg-gray-800 text-gray-300 rounded-full py-1 px-4 pl-10 focus:outline-none focus:bg-gray-700 focus:text-white transition w-64">
                     <svg class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">

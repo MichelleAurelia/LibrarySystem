@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto">
-        <a href="{{ url()->previous() }}" class="text-gray-400 hover:text-white mb-8 inline-block">&larr; Back</a>
+        <a href="{{ url()->previous() }}" class="text-gray-400 hover:text-white mb-8 inline-block">&larr; {{ __('user.butt_back') }}</a>
 
         <div class="flex flex-col md:flex-row gap-12">
             <!-- Book Cover -->
@@ -18,7 +18,7 @@
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-2">{{ $book->title }}</h1>
                     <div class="flex flex-wrap gap-4 text-gray-300">
-                        <span>By <span
+                        <span>{{ __('user.author') }} <span
                                 class="text-white">{{ $book->authors->first()->name ?? 'Unknown Author' }}</span></span>
                         <span>&bull;</span>
                         @foreach ($book->categories as $genre)
@@ -39,15 +39,15 @@
 
                 <div class="grid grid-cols-2 gap-6 border-t border-gray-700 pt-6">
                     <div>
-                        <span class="block text-gray-400 text-sm">Publisher</span>
+                        <span class="block text-gray-400 text-sm">{{ __('user.publisher') }}</span>
                         <span class="text-white">{{ $book->publisher ?? 'Unknown' }}</span>
                     </div>
                     <div>
-                        <span class="block text-gray-400 text-sm">Published Year</span>
+                        <span class="block text-gray-400 text-sm">{{ __('user.publish') }}</span>
                         <span class="text-white">{{ $book->publish_year ?? 'N/A' }}</span>
                     </div>
                     <div>
-                        <span class="block text-gray-400 text-sm">Added On</span>
+                        <span class="block text-gray-400 text-sm">{{ __('user.added') }}</span>
                         <span class="text-white">{{ $book->created_at->format('M d, Y') }}</span>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <input type="hidden" name="redirect_to" value="{{ url()->previous() }}">
                             <button type = "submit"
                             class="bg-[#EAD4AA] text-black font-bold py-3 px-8 rounded flex items-center space-x-2 hover:bg-[#dcc08e] transition">
-                            <span>BORROW BOOK REQUEST</span>
+                            <span>{{ __('user.butt_borrow') }}</span>
                             </button>
                         </form>
                     @else
