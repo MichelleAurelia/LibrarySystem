@@ -49,14 +49,14 @@
 
 <body class="bg-[#0B1120] text-white font-sans antialiased">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] lg:grid-cols-2 min-h-screen">
 
         <!-- LEFT SECTION -->
          
-        <div class="flex flex-col items-center justify-center px-6 h-full">
-            <div class="bg-[#111C3A] rounded-3xl w-full max-w-lg p-10 shadow-xl">
+        <div class="flex flex-col items-center justify-center px-6 sm:px-8 py-12 md:py-0">
+            <div class="bg-[#111C3A] rounded-3xl w-full max-w-md sm:max-w-lg p-8 sm:p-10 shadow-xl">
                 
-                <h1 class="text-2xl font-bold text-white mb-5">Library System</h1>
+                <h1 class="text-2xl font-bold text-white mb-6">Library System</h1>
                 
                 <div class="flex flex-col gap-6">
                     @yield('content')
@@ -66,7 +66,7 @@
         </div>
 
         <!-- RIGHT SECTION -->
-        <div class="hidden md:block h-full">
+        <div class="hidden md:block relative">
             <img 
                 src="{{ asset('regLog.jpg') }}" 
                 alt="Register / Login" 

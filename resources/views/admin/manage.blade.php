@@ -8,7 +8,7 @@
 
     </div>
     <!-- All Books -->
-    <div class="flex- flex-col">
+    <div class="overflow-x-auto">
         <div class="flex flex-row justify-between">
             <h2 class="text-xl md:text-2xl font-semibold mb-2">All Books</h2>
             <a href="{{ route('create-page') }}" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded flex items-center gap-2 transition-colors">
@@ -20,8 +20,8 @@
                 <span class="flex items-center">Add New Book</span>
             </a>
         </div>
-        <table  class="w-full h-px my-6 text-left">
-            <thead class="border-b">
+        <table class="w-full text-left border-collapse">
+            <thead class="border-b hidden md:table-header-group">
                 <tr>
                     <th class="py-3">Book Title</th>
                     <th class="py-3">Author</th>
@@ -31,10 +31,25 @@
             </thead>
             <tbody id="booksTableBody">
                 @foreach($books as $book)
-                <tr class="border-b border-gray-500">
-                    <td class="py-4 max-w-[256px]">{{ $book->title }}</td>
-                    <td class="py-4">{{ $book->authors->first()?->name ?? 'Tanpa Author'}}</td>
-                    <td class="py-4">{{ $book->status }}</td>
+                <tr class="border-b border-gray-600 block md:table-row mb-4 mt-4 md:mb-0 rounded-lg md:rounded-none bg-[#0F172A] md:bg-transparent p-4 md:p-0">
+                    <td class="py-2 md:py-4 block md:table-cell">
+                        <span class="md:hidden text-gray-400 text-sm">Title</span>
+                        <p class="font-semibold">{{ $book->title }}</p>
+                    </td>
+
+                    <td class="py-2 md:py-4 block md:table-cell">
+                        <span class="md:hidden text-gray-400 text-sm">Author</span>
+                        {{ $book->authors->first()?->name ?? 'Tanpa Author' }}
+                    </td>
+
+                    <td class="py-2 md:py-4 block md:table-cell">
+                        <span class="md:hidden text-gray-400 text-sm">Status</span>
+                        <span class="px-2 py-1 rounded text-xs
+                            {{ $book->status === 'borrowed' ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400' }}">
+                            {{ ucfirst($book->status) }}
+                        </span>
+                    </td>
+
                     <td class="flex flex-row gap-5 py-4">
                         <a href="{{ route('edit-page', $book->id) }}" class="mt-auto bg-[#EAD4AA] text-black font-bold py-2 px-4 rounded flex flex-row gap-2 justify-center hover:bg-[#dcc08e] transition">
                             <span class="flex items-center">
@@ -65,7 +80,7 @@
                 @endforeach
             </tbody>
         </table>
-        <div id="pagination" class="flex justify-start gap-2 mt-6"></div>
+        <div id="pagination" class="flex flex-wrap gap-2 mt-6"></div>
     </div>
 @endsection
 

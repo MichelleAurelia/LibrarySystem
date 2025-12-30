@@ -17,6 +17,7 @@ Route::get('lang/{locale}', LocalController::class)->name('switch.language');
 Route::get('/', [HomeController::class, 'index'])->middleware(MustLogin::class)->middleware(PreventHistory::class)->name('home');
 Route::get('/view-all', [BookController::class, 'viewAll'])->name('view-all');
 Route::get('/search', [BookController::class, 'search'])->name('books.search');
+Route::view('/about', 'about')->name('about');
 Route::get('/books/{book}', [BookController::class, 'show'])->name('books.show');
 Route::get('/login', [AuthController::class,'loginForm'])->name('loginForm');
 Route::post('/user/login',[AuthController::class, 'login'])->name('login');

@@ -51,8 +51,6 @@
                                     <span>{{ __('user.butt_return') }}</span>
                                 </button>
                             </form>
-                            <!-- Read Book Button -->
-                             <!-- INI BUTTON BUAT READ BOOKNYA UBAH AJA LOGIC RESTNYA -->
                             <a href="{{ route('book.read', $borrow->id) }}"
                             target="_blank"
                             class="mt-auto bg-[#EAD4AA] text-black font-bold py-3 px-4 rounded

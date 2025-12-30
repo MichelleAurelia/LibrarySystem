@@ -93,6 +93,8 @@
                         </a>
                     @endif
 
+                    <a href="{{ route('about') }}" class="block text-orange-200 hover:text-white">About Us</a>
+
                     <div class="flex items-center gap-3 text-gray-400">
                         <div class="w-9 h-9 rounded-full bg-blue-200 text-blue-800
                                     flex items-center justify-center font-bold text-xs">
@@ -132,6 +134,8 @@
                         {{ __('user.borrow') }}
                     </a>
                 @endif
+
+                <a href="{{ route('about') }}" class="block text-orange-200 hover:text-white">About Us</a>
 
                 <div class="flex items-center gap-3 text-gray-400 pt-4 border-t border-gray-700">
                     <div class="w-9 h-9 rounded-full bg-blue-200 text-blue-800

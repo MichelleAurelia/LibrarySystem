@@ -4,25 +4,25 @@
     <h1 class="text-4xl md:text-5xl font-bold mb-2">Edit Book</h1>
     <div class="w-full h-px bg-gray-700 my-6"></div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         
-        <div class="sticky top-4 h-fit">
+        <div class="lg:sticky lg:top-6 h-fit">
             <h2 class="text-3xl md:text-4xl font-bold mb-2">Current Book Information</h2>
             <div class="w-full h-px bg-white my-6"></div>
             
-            <div class="flex flex-row gap-5">
-                <div class="w-1/2 max-w-[250px] flex">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <div class="w-full sm:w-1/2 max-w-[220px] mx-auto sm:mx-0">
                     <div class="relative aspect-[2/3] overflow-hidden rounded-lg bg-gray-700">
                         <img id="display-image" img src="{{ $book->image ? asset($book->image) : 'https://placehold.co/200x300' }}" alt="{{ $book->title }}" class="object-cover w-full h-full">
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <h3 id="display-title" class="text-3xl font-bold mb-4">{{ $book->title }}</h3>
+                    <h3 id="display-title" class="text-2xl sm:text-3xl font-bold mb-4">{{ $book->title }}</h3>
                     
-                    <h3 class="text-2xl font-bold mb-8">By <span id="display-author">{{ $book->authors->first()?->name ?? 'Unknown' }}</span></h3>
+                    <h3 class="text-lg sm:text-2xl font-bold mb-6">By <span id="display-author">{{ $book->authors->first()?->name ?? 'Unknown' }}</span></h3>
                     
                     <h3 class="text-2xl font-bold mb-2">Genre</h3>
-                    <div id="display-genre-container" class="flex flex-col gap-2">
+                    <div id="display-genre-container" class="flex flex-wrap gap-x-4 gap-y-1">
                         @foreach($book->categories as $category)
                             <span class="text-gray-300">&bull; {{ $category->name }}</span>
                         @endforeach
@@ -93,7 +93,7 @@
 
                 <div>
                     <label class="block font-semibold">Genre</label>
-                    <div class="grid grid-cols-2 gap-3 p-3 bg-slate-800 border border-slate-700 rounded-xl mt-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 bg-slate-800 border border-slate-700 rounded-xl mt-3">
                         @foreach ($categories as $category)
                         <label class="flex items-center gap-3 cursor-pointer group">
                             <input type="checkbox" name="category_ids[]" value="{{ $category->id }}" 
