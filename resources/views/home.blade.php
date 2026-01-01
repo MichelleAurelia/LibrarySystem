@@ -50,7 +50,7 @@
                 <div class="group cursor-pointer">
                     <a href="{{ route('books.show', $book) }}">
                         <div class="relative aspect-[2/3] mb-4 overflow-hidden rounded-lg">
-                            <img src="{{ $book->image ? asset('storage/' . $book->image) :  'https://placehold.co/200x300' }}" alt="{{ $book->title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                            <img src="{{ $book->image ? asset($book->image) :  'https://placehold.co/200x300' }}" alt="{{ $book->title }}" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <span class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full">{{__('user.view_detail')}}</span>
                             </div>
